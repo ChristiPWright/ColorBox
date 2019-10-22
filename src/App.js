@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-///currently not looping correctly - index is not changing
+
   class App extends React.Component {
     constructor(props){
       super(props)
@@ -11,6 +11,7 @@ import './App.css';
         }
     }
 
+//handleChange clicks through array 1 click=1 color; working put not the prompt
  handleChange = () => {
     let newColor 
     let colorArray = ['white', 'green', 'blue', 'yellow', 'red', 'purple', 'orange']
@@ -22,11 +23,6 @@ import './App.css';
      return this.setState({color: newColor})
   }
   
-  // return in the for loop returns arr[0] and after arr[-1]
-  arrayChange = () => {
-    let colorArray = ['white', 'green', 'blue', 'yellow', 'red', 'purple', 'orange']
-    colorArray.forEach(element => element)
-  }
 
   render(){
     return (
@@ -36,7 +32,7 @@ import './App.css';
           <h4>Click the below square to discover colors.</h4>
           <button 
             style = {{backgroundColor: this.state.color}} 
-            onClick = {this.arrayChange}
+            onClick = {this.handleChange}
           >
             {this.state.color}
           </button>
